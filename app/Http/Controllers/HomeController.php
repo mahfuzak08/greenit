@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
     public function index(){
         $data = array();
+        $data['page_name'] = "home";
         $data['topnav'] = Page::where('section_name', 'Top Nav')->pluck('value');
         $data['logo'] = Page::where('section_name', 'Logo')->pluck('value2');
         $data['slider'] = Page::where('section_name', 'Slider')
@@ -55,6 +56,7 @@ class HomeController extends Controller
     
     public function about(){
         $data = array();
+        $data['page_name'] = "about";
         $data['topnav'] = Page::where('section_name', 'Top Nav')->pluck('value');
         $data['logo'] = Page::where('section_name', 'Logo')->pluck('value2');
         $data['address'] = Page::where('section_name', 'Contact Address')
@@ -78,8 +80,9 @@ class HomeController extends Controller
         return view('about', compact('data'));
     }
     
-    public function products(){
+    public function services(){
         $data = array();
+        $data['page_name'] = "services";
         $data['topnav'] = Page::where('section_name', 'Top Nav')->pluck('value');
         $data['logo'] = Page::where('section_name', 'Logo')->pluck('value2');
         $data['address'] = Page::where('section_name', 'Contact Address')
@@ -100,11 +103,38 @@ class HomeController extends Controller
         $data['newsletter'] = Page::where('section_name', 'Newsletter')
                                 ->get(['value'])
                                 ->toArray();
-        return view('products', compact('data'));
+        return view('services', compact('data'));
+    }
+    
+    public function courses(){
+        $data = array();
+        $data['page_name'] = "courses";
+        $data['topnav'] = Page::where('section_name', 'Top Nav')->pluck('value');
+        $data['logo'] = Page::where('section_name', 'Logo')->pluck('value2');
+        $data['address'] = Page::where('section_name', 'Contact Address')
+                                ->get(['key', 'value'])
+                                ->toArray();
+        $data['featured_link'] = Page::where('section_name', 'Featured Link')
+                                ->orderBy('key')
+                                ->get(['value', 'value3'])
+                                ->toArray();
+        $data['quick_link'] = Page::where('section_name', 'Quick Link')
+                                ->orderBy('key')
+                                ->get(['value', 'value3'])
+                                ->toArray();
+        $data['social_media_link'] = Page::where('section_name', 'Social Media Link')
+                                ->orderBy('key')
+                                ->get(['value', 'value3'])
+                                ->toArray();
+        $data['newsletter'] = Page::where('section_name', 'Newsletter')
+                                ->get(['value'])
+                                ->toArray();
+        return view('courses', compact('data'));
     }
     
     public function contact(){
         $data = array();
+        $data['page_name'] = "contact";
         $data['topnav'] = Page::where('section_name', 'Top Nav')->pluck('value');
         $data['logo'] = Page::where('section_name', 'Logo')->pluck('value2');
         $data['address'] = Page::where('section_name', 'Contact Address')

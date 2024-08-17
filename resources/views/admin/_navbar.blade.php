@@ -1,7 +1,7 @@
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
     <a class="navbar-brand brand-logo" style="margin-left: 30px;float: left;" href="{{ route('dashboard') }}">
-      <img src="logo.png" style="width: 200px;height: 45px;float: left;top: 15px;position: absolute;" alt="{{config('app.name')}} logo" /> 
+      <img src="{{asset($data['logo'][0])}}" style="width: 200px;height: 45px;float: left;top: 15px;position: absolute;" alt="{{config('app.name')}} logo" /> 
       {{-- <div style="font-size: 20px;font-weight: bold;">{{config('app.name')}} </div> --}}
     </a>
     <a class="navbar-brand brand-logo-mini" style="margin-left: 15px;float: left;" href="{{ route('dashboard') }}">

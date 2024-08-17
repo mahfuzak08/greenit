@@ -9,68 +9,80 @@ Author URL: WWW.ABSOFT-BD.COM
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{{config('app.name')}} | Home </title>
-    <link href="assets/css/fonts.css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <title>Green IT::Home</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
   </head>
   <body>
+<!--header-->
+<header id="site-header" class="fixed-top nav-fixed">
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark stroke">
+          <h1>
+            <a class="navbar-brand" href="index.php">
+                <img src="assets/images/logo.png" alt="Your logo" title="Your logo" style="height:50px;top: -3px;position: relative;" />
+            </a>
+          </h1>
+          <!-- if logo is image enable this   
+          <a class="navbar-brand" href="#index.html">
+              <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+          </a> -->
+          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+              data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+              <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+              </span>
+          </button>
 
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ml-auto mr-5">
+                  <li class="nav-item {{$data['page_name'] == 'home' ? 'active' : ''}}">
+                      <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item {{$data['page_name'] == 'about' ? 'active' : ''}}">
+                      <a class="nav-link" href="{{route('about')}}">About</a>
+                  </li>
+                  <li class="nav-item {{$data['page_name'] == 'services' ? 'active' : ''}}">
+                      <a class="nav-link" href="{{route('services')}}">Our Services</a>
+                  </li>
+                  <li class="nav-item {{$data['page_name'] == 'courses' ? 'active' : ''}}">
+                      <a class="nav-link" href="{{route('courses')}}">Our Courses</a>
+                  </li>
+                  <li class="nav-item {{$data['page_name'] == 'contact' ? 'active' : ''}}">
+                      <a class="nav-link" href="{{route('contact')}}">Contact</a>
+                  </li>
+                  <nav class="ml-lg-3">
+                      <div class="search-bar">
+                          <form action="#" method="GET" class="search">
+                              <input type="search" class="search__input" name="search"
+                                  placeholder="Search here.." onload="equalWidth()" required>
+                              <span class="fa fa-search search__icon"></span>
+                          </form>
+                      </div>
+                  </nav>
+              </ul>
+          </div>
+          <!-- toggle switch for light and dark theme -->
 
-<!-- Top Menu 1 -->
-<section class="w3l-top-menu-1">
-	<div class="top-hd">
-		<div class="container">
-	<header class="row top-menu-top">
-		<div class="accounts col-md-9 col-6">
-				<li class="top_li"><span class="fa fa-phone"></span><a href="tel:{{$data['topnav'][0]}}">{{$data['topnav'][0]}}</a> </li>
-				<li class="top_li1"><span class="fa fa-envelope-o"></span> <a href="mailto:{{$data['topnav'][1]}}" class="mail"> {{$data['topnav'][1]}}</a>	</li>
-		</div>
-		<div class="social-top col-md-3 col-6">
-			<a href="#" class="btn btn-secondary btn-theme4">CAREERS</a>
-		</div>
-	</header>
-</div>
-</div>
-</section>
-<!-- //Top Menu 1 -->
-<section class="w3l-bootstrap-header">
-  <nav class="navbar navbar-expand-lg navbar-light py-lg-2 py-2">
-    <div class="container">
-      <!--<a class="navbar-brand" href="#"><img src="assets/images/logo.png" width="40px" > NASCO</a>-->
-      <!-- if logo is image enable this   -->
-      <a class="navbar-brand" href="##">
-          <img src="{{asset($data['logo'][0])}}" alt="Your logo" title="Your logo" style="height:35px;" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon fa fa-bars"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('home')}}">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="{{route('about')}}">About</a>
-				<a class="dropdown-item" href="{{route('about')}}#mission">Mission</a>
-				<a class="dropdown-item" href="{{route('about')}}#vision">Vision</a>
-			</div>
-		  </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('products')}}">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('contact')}}">Contact</a>
-          </li>
-        </ul>
-        <form action="search-results.html" class="form-inline position-relative my-2 my-lg-0">
-          <input class="form-control search" type="search" placeholder="Search here..." aria-label="Search" required="">
-          <button class="btn btn-search position-absolute" type="submit"><span class="fa fa-search" aria-hidden="true"></span></button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</section>
+          <div class="mobile-position">
+              <nav class="navigation">
+                  <div class="theme-switch-wrapper">
+                      <label class="theme-switch" for="checkbox">
+                          <input type="checkbox" id="checkbox">
+                          <div class="mode-container py-1">
+                              <i class="gg-sun"></i>
+                              <i class="gg-moon"></i>
+                          </div>
+                      </label>
+                  </div>
+              </nav>
+          </div>
+          <!-- //toggle switch for light and dark theme -->
+      </nav>
+  </div>
+</header>

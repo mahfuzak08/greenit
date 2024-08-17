@@ -15,7 +15,9 @@ class AdminController extends Controller
     public function dashboard(){
         activity()->log('Logged in');
         $pages = Page::where('section_name', 'main')->get();
-        return view('admin.home', compact('pages'));
+        $data = array();
+        $data['logo'] = Page::where('section_name', 'Logo')->pluck('value2');
+        return view('admin.home', compact('pages', 'data'));
     }
     
     public function page(){
@@ -59,8 +61,9 @@ class AdminController extends Controller
         }
 
         $pages = Page::where('section_name', 'main')->get();
-
-        return view('admin.page', compact('page', 'pages', 'section', 'sectiongroup', 'edititem'));
+        $data = array();
+        $data['logo'] = Page::where('section_name', 'Logo')->pluck('value2');
+        return view('admin.page', compact('data', 'page', 'pages', 'section', 'sectiongroup', 'edititem'));
     }
 
     public function save_section(Request $request){

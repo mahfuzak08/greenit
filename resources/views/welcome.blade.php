@@ -1,229 +1,365 @@
 @include('layouts._head')
-<style>
-  .w3l-main-slider .banner-top1{
-    background: url({{$data['slider'][0]['value2']}}) no-repeat;
-    background-size: cover; 
-  }
-  .w3l-main-slider .banner-top2{
-    background: url({{$data['slider'][1]['value2']}}) no-repeat;
-    background-size: cover; 
-  }
-  .w3l-main-slider .banner-top3{
-    background: url({{$data['slider'][2]['value2']}}) no-repeat;
-    background-size: cover; 
-  }
-  .w3l-main-slider .banner-top4{
-    background: url({{$data['slider'][3]['value2']}}) no-repeat;
-    background-size: cover; 
-  }
-</style>
-<section class="w3l-main-slider" id="home">
-  <!-- main-slider -->
-  <div class="companies20-content">
-    <div class="owl-one owl-carousel owl-theme">
-      @foreach($data['slider'] as $k=>$row)
-      <div class="item">
-        <li>
-          <div class="slider-info banner-view banner-top{{$k+1}} bg bg2" data-selector=".bg.bg2">
-            <div class="banner-info">
-              <div class="container">
-                <div class="banner-info-bg mx-auto text-center">
-                  <h5>{{$row['value']}}</h5>
-                 <!-- <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="#">Read More</a> -->
+<section id="home" class="w3l-banner py-5">
+    <div class="container py-lg-5 mt-lg-5">
+        <div class="py-lg-4 my-2">
+            <div class="banner-info-grid mt-lg-5">
+                <h3 class="mb-4">Stylish Creative Designs.</h3>
+                <section id="bottom" class="demo">
+                    <a href="#bottom"><span></span>Scroll</a>
+                  </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="w3l-servicesblock1 py-5" id="moreservices">
+    <div class="container py-lg-5 py-md-4 py-3">
+        <div class="grids-area-hny main-cont-wthree-fea row ">
+            <div class="col-lg-4 col-md-6 grids-feature">
+                <div class="area-box">
+                    <span class="fa fa-retweet mt-0"></span>
+                    <div class="area-box-info">
+                        <h4><a href="#feature" class="title-head">Social Media Strategy</a></h4>
+                        <p class="mt-lg-3 mt-2">Vivamus a ligula quam tesque et libero justo, ultrices in. Ut eu leo non. Duis
+                            sed et dolor sit amet.</p>
+                    </div>
                 </div>
-                
+            </div>
+            <div class="col-lg-4 col-md-6 grids-feature mt-md-0 mt-5">
+                <div class="area-box">
+                    <span class="fa fa-clock-o mt-0"></span>
+                    <div class="area-box-info">
+                        <h4><a href="#feature" class="title-head">Branding Strategy</a></h4>
+                        <p class="mt-lg-3 mt-2">Vivamus a ligula quam tesque et libero justo, ultrices in. Ut eu leo non. Duis
+                            sed et dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grids-feature mt-lg-0 mt-5">
+                <div class="area-box">
+                    <span class="fa fa-line-chart mt-0"></span>
+                    <div class="area-box-info">
+                        <h4><a href="#feature" class="title-head">UI/UX Design</a></h4>
+                        <p class="mt-lg-3 mt-2">Vivamus a ligula quam tesque et libero justo, ultrices in. Ut eu leo non. Duis
+                            sed et dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grids-feature mt-5 pt-lg-4">
+                <div class="area-box">
+                    <span class="fa fa-trash-o mt-0"></span>
+                    <div class="area-box-info">
+                        <h4><a href="#feature" class="title-head">Digital Product Strategy</a></h4>
+                        <p class="mt-lg-3 mt-2">Vivamus a ligula quam tesque et libero justo, ultrices in. Ut eu leo non. Duis
+                            sed et dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grids-feature mt-5 pt-lg-4">
+                <div class="area-box">
+                    <span class="fa fa-video-camera mt-0"></span>
+                    <div class="area-box-info">
+                        <h4><a href="#feature" class="title-head">Web Hosting Service</a></h4>
+                        <p class="mt-lg-3 mt-2">Vivamus a ligula quam tesque et libero justo, ultrices in. Ut eu leo non. Duis
+                            sed et dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 grids-feature mt-5 pt-lg-4">
+                <div class="area-box">
+                    <span class="fa fa-search-plus mt-0"></span>
+                    <div class="area-box-info">
+                        <h4><a href="#feature" class="title-head">SEO Services</a></h4>
+                        <p class="mt-lg-3 mt-2">Vivamus a ligula quam tesque et libero justo, ultrices in. Ut eu leo non. Duis
+                            sed et dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="w3l-portfolio-8 py-5">
+    <div class="portfolio-main py-lg-5 py-md-4 py-2">
+        <div class="container">
+            <div class="row galler-top">
+                <div class="col-lg-3 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/p1.jpg" alt="product" class="img-fluid" />
+                        <div class="img-info">
+                            <a href="#url" class="img-title">UI experience</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quia.</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/p2.jpg" alt="product" class="img-fluid">
+                        <div class="img-info">
+                            <a href="#url" class="img-title">Wordpress</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quia.</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/p3.jpg" alt="product" class="img-fluid">
+                        <div class="img-info">
+                            <a href="#url" class="img-title">Ecommerce</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quia.</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/p4.jpg" alt="product" class="img-fluid">
+                        <div class="img-info">
+                            <a href="#url" class="img-title">Headphones</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quia.</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/p5.jpg" alt="product" class="img-fluid">
+                        <div class="img-info">
+                            <a href="#url" class="img-title">Mobile app</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quia.</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/p6.jpg" alt="product" class="img-fluid">
+                        <div class="img-info">
+                            <a href="#url" class="img-title">Modern Ideas</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quia.</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/p8.jpg" alt="product" class="img-fluid">
+                        <div class="img-info">
+                            <a href="#url" class="img-title">Creativity</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quia.</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6 protfolio-item hover14">
+                    <figure>
+                        <img src="assets/images/p7.jpg" alt="product" class="img-fluid">
+                        <div class="img-info">
+                            <a href="#url" class="img-title">Fashion design</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quia.</p>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="w3l-news" id="news">
+    <section id="grids5-block" class="py-5">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <h3 class="title-big text-center">See what’s going on</h3>
+        <div class="row mt-lg-5 mt-4">
+          <div class="col-lg-4 col-md-6 mt-md-0 mt-sm-4">
+            <div class="grids5-info">
+              <a href="#blog-single" class="d-block zoom"><img src="assets/images/blog1.jpg" alt="" class="img-fluid news-image" /></a>
+              <div class="blog-info">
+                <h4><a href="#blog-single">Best free Web templates</a></h4>
+                <p class="date"><span class="fa fa-calendar mr-2"></span> September 17, 2020</p>
+                <p>Lorem ipsum dolor sit amet ad minus libero ullam ipsam quas earum!</p>
+                <a href="#blog-single" class="btn btn-news mt-4">Read More</a>
               </div>
             </div>
           </div>
-        </li>
-      </div>
-      @endforeach
-    </div>
-  </div>
-
-</div>
-<!-- /main-slider -->
-</section>
-<section class="w3l-feature-3" id="features">
-	<div class="grid top-bottom mb-lg-5 pb-lg-5">
-		<div class="container">
-			<div class="middle-section grid-column text-center">
-        @foreach($data['features_block'] as $k=>$row)
-				<div class="three-grids-columns">
-					<!-- <span class="fa fa-laptop"></span> -->
-          <img src="assets/images/sub_icon-1.png">
-					<h4>{{$row['key']}}</h4>
-					<p>{{$row['value']}}</p>
-					<a href="{{$row['value3']}}" class="btn btn-secondary btn-theme3 mt-4">Read More </a>
-				</div>
-        @endforeach
-			</div>
-		</div>
-	</div>
-</section>
-<!-- features-4 block -->
-<section class="w3l-index1" id="about">
-	<div class="calltoaction-20  py-5 editContent">
-		<div class="container py-md-3">
-		
-			<div class="calltoaction-20-content row">
-				<div class="column center-align-self col-lg-6 pr-lg-5">
-					<h5 class="editContent">{{$data['recent_project'][0]['key']}}</h5>
-					<p class="more-gap editContent">{{$data['recent_project'][0]['value']}}</p>
-					<p class="more-gap editContent">{{$data['recent_project'][1]['value']}}</p>
-					<a class="btn btn-secondary btn-theme2 mt-3" href="{{$data['recent_project'][0]['value3']}}"> Read More</a>
-				</div>
-				<div class="column ccont-left col-lg-6">
-					<!-- <img src="assets/images/g1.jpg" class="img-responsive" alt=""> -->
-          <!-- <video width="100%" height="auto" preload="none" controls> -->
-          <video width="100%" height="auto" autoplay muted loop>
-            <source src="{{$data['recent_project'][0]['value2']}}" type="video/mp4">
-            <source src="{{$data['recent_project'][1]['value2']}}" type="video/webm">
-            <source src="assets/images/v-preview.png" type="video/ogg">
-          </video>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- customers4 block -->
-<section class="w3l-customers-4" id="testimonials">
-  <div id="customers4-block" class="py-5">
-    <div class="container py-md-3">
-  
-     <div class="section-title align-center row">
-      <div class="item-top col-md-6 pr-md-5">
-        <div class="heading">
-          <h3 class="head text-white">{{$data['ceo'][0]['value']}}</h3>
-          <p class="my-3 head text-white">{{$data['ceo'][1]['value']}}</p>
-            <p class="my-3 head text-white">{{$data['ceo'][2]['value']}}</p>
-          </div>
-     </div>
-          <div class="item-top col-md-6 mt-md-0 mt-4">
-            <div class="item text-center">
-             <div class="imgTitle">
-               <img src="{{$data['ceo'][3]['value2']}}" class="img-responsive" alt="" />
+          <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
+            <div class="grids5-info">
+              <a href="#blog-single" class="d-block zoom"><img src="assets/images/blog2.jpg" alt="" class="img-fluid news-image" /></a>
+              <div class="blog-info">
+                <h4><a href="#blog-single">Skills to become a Designer</a></h4>
+                <p class="date"><span class="fa fa-calendar mr-2"></span> September 17, 2020</p>
+                <p>Lorem ipsum dolor sit amet ad minus libero ullam ipsam quas earum!</p>
+                <a href="#blog-single" class="btn btn-news mt-4">Read More</a>
               </div>
-              <h6 class="mt-3">{{$data['ceo'][3]['value']}}</h6>
-              <p class="">{{$data['ceo'][3]['value3']}}</p>
-              <!-- <p> Magna aliqua. Ut enim ad minim veniam, quis nostrud.Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p> -->
-              
+            </div>
           </div>
-         </div>
-    </div>
-  </div>
-  </div>
-</section>
-<section class="w3l-index2">
-        <div class="main-w3 py-5" id="stats">
-            <div class="container py-lg-3">
-               <div class="row main-cont-wthree-fea">
-                  @foreach($data['no_of_project'] as $row)
-                    <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
-                        <div class="grids-speci1">
-                            <h3 class="title-spe">{{$row['value3']}}</h3>
-                            <p>{{$row['value']}}</p>
+          <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+            <div class="grids5-info">
+              <a href="#blog-single" class="d-block zoom"><img src="assets/images/blog3.jpg" alt="" class="img-fluid news-image" /></a>
+              <div class="blog-info">
+                <h4><a href="#blog-single">How to make 404 error page?</a></h4>
+                <p class="date"><span class="fa fa-calendar mr-2"></span> September 17, 2020</p>
+                <p>Lorem ipsum dolor sit amet ad minus libero ullam ipsam quas earum!</p>
+                <a href="#blog-single" class="btn btn-news mt-4">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+<section class="w3l-testimonials" id="testimonials">
+    <div class="midd-w3 py-5">
+        <div class="container py-lg-5 py-md-3">
+            <div id="owl-demo1" class="owl-carousel owl-theme mt-4 py-2 mb-4">
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>They have responded immediately whenever we have had a question or problem and have
+                                    been an amazing business partner. I Will recommend their services to
+                                    many of our clients and have been thrilled with the work that they have done.</q>
+                            </blockquote>
+                            <div class="testi-des">
+                                <div class="peopl align-self">
+                                    <h3>Scarlett jack</h3>
+                                    <p class="identity">Web Developer</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    @endforeach
                 </div>
-
-            </div>
-        </div>
-        <!-- //specifications -->
-    </section>
-<!-- grids block 5 -->
-<!-- customers Section -->
-<section class="w3l-customers py-md-5 py-4" id="clients">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="owl-three owl-carousel owl-theme logo-view">
-                    @foreach($data['client_list'] as $row)
-                    <div class="item">
-                        <img src="{{$row['value2']}}" alt="{{$row['value']}}" class="img-fluid">
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>The service was excellent! I was very impressed with their work. These guys are
+                                    incredibly talented, easy to work with, easy to get a hold of – true professionals.
+                                    My project has been completed in time and on the highest level.</q>
+                            </blockquote>
+                            <div class="testi-des">
+                                <div class="peopl align-self">
+                                    <h3>Grayson lily</h3>
+                                    <p class="identity">Digital Marketer</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    @endforeach
-                    @foreach($data['client_list'] as $row)
-                    <div class="item">
-                        <img src="{{$row['value2']}}" alt="{{$row['value']}}" class="img-fluid">
+                </div>
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>They have responded immediately whenever we have had a question or problem and have
+                                    been an amazing business partner. I Will recommend their services to
+                                    many of our clients and have been thrilled with the work that they have done.</q>
+                            </blockquote>
+                            <div class="testi-des">
+                                <div class="peopl align-self">
+                                    <h3>Scarlett jack</h3>
+                                    <p class="identity">Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    @endforeach
+                </div>
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>The service was excellent! I was very impressed with their work. These guys are
+                                    incredibly talented, easy to work with, easy to get a hold of – true professionals.
+                                    My project has been completed in time and on the highest level.</q>
+                            </blockquote>
+                            <div class="testi-des">
+                                <div class="peopl align-self">
+                                    <h3>Grayson lily</h3>
+                                    <p class="identity">Digital Marketer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>They have responded immediately whenever we have had a question or problem and have
+                                    been an amazing business partner. I Will recommend their services to
+                                    many of our clients and have been thrilled with the work that they have done.</q>
+                            </blockquote>
+                            <div class="testi-des">
+                                <div class="peopl align-self">
+                                    <h3>Scarlett jack</h3>
+                                    <p class="identity">Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>The service was excellent! I was very impressed with their work. These guys are
+                                    incredibly talented, easy to work with, easy to get a hold of – true professionals.
+                                    My project has been completed in time and on the highest level.</q>
+                            </blockquote>
+                            <div class="testi-des">
+                                <div class="peopl align-self">
+                                    <h3>Grayson lily</h3>
+                                    <p class="identity">Digital Marketer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- //customers Section -->
+
+<div class="w3l-faq-block py-5" id="faq">
+    <div class="container py-lg-5">
+        <div class="row">
+            <div class="col-lg-6 pr-lg-5">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button id="accordion-button-1" aria-expanded="true"><span class="accordion-title">How much does
+                                a static website cost?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
+                                ut. Ut tortor.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How to
+                                choose a best web template?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
+                                ut. Ut pretium.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">How to download a template?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
+                                ut. Ut tortor.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Why should i choose a free website?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
+                                ut. Ut potenti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-lg-0 mt-sm-5 mt-4">
+                <img src="assets/images/faq.jpg" alt="" class="img-fluid radius-image">
+            </div>
+        </div>
+    </div>
+</div>
+
 @include('layouts._foot')
-
-
-<script>
-  $(document).ready(function () {
-    $('.owl-one').owlCarousel({
-      loop: true,
-      margin: 0,
-      nav: true,
-      responsiveClass: true,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      autoplaySpeed: 1000,
-      autoplayHoverPause: false,
-      responsive: {
-        0: {
-          items: 1,
-          nav: false
-        },
-        480: {
-          items: 1,
-          nav: false
-        },
-        667: {
-          items: 1,
-          nav: true
-        },
-        1000: {
-          items: 1,
-          nav: true
-        }
-      }
-    })
-  })
-</script>
-<script>
-  $(document).ready(function () {
-    $('.owl-three').owlCarousel({
-      loop: true,
-      margin: 0,
-      nav: false,
-      dots: false,
-      responsiveClass: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplaySpeed: 1000,
-      autoplayHoverPause: false,
-      responsive: {
-        0: {
-          items: 3,
-          nav: true
-        },
-        480: {
-          items: 3,
-          nav: true
-        },
-        667: {
-          items: 3,
-          nav: true
-        },
-        800: {
-          items: 4,
-          nav: true
-        },
-        1000: {
-          items: 5,
-          nav: true
-        }
-      }
-    })
-  })
-</script>
