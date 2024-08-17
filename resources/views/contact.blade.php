@@ -20,7 +20,7 @@
                 <div class="row map-content-9">
                     <div class="col-lg-7">
                         <p class="mb-4">Your email address will not be published. Required fields are marked *</p>
-                        <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="text-right">
+                        <form action="" method="post" class="text-right">
                             <div class="form-grid">
                                 <input type="text" name="w3lName" id="w3lName" placeholder="Name*" required="">
                                 <input type="email" name="w3lSender" id="w3lSender" placeholder="Email*" required="">

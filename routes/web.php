@@ -10,6 +10,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/courses', [HomeController::class, 'courses'])->name('courses');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/send_email', [HomeController::class, 'send_email'])->name('send-email');
 
 Route::middleware([
     'auth:sanctum',

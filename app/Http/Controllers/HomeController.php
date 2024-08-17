@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Page;
+use App\Mail\SampleMail;
 
 class HomeController extends Controller
 {
@@ -158,6 +160,26 @@ class HomeController extends Controller
         $data['map'] = Page::where('section_name', 'Map link')
                                 ->get(['value'])
                                 ->toArray();
+        $data['site_key'] = env('SITE_KEY');
+
         return view('contact', compact('data'));
+    }
+    
+    public function send_email(Request $request){
+        $name = "Funny Coder";
+        if(isset($_POST["g-recaptcha-response"]) && !empty($_POST["g-recaptcha-response"]) ){
+            $secret_key = env('SECRET_KEY');
+            $verify_response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST["g-recaptcha-response"]);
+            $response = json_decode($verify_response);
+            if($response->success){
+                Mail::to('akramul@nascobd.com')->send(new SampleMail($request->all()));
+                flash()->addSuccess('Email send successfully.');    
+            }else{
+                flash()->addSuccess('Recaptcha response false.');
+            }
+        }else{
+            flash()->addSuccess('Recaptcha error.');
+        }
+        return redirect('contact');
     }
 }
